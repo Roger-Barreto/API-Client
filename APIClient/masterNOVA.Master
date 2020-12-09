@@ -1,0 +1,131 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterNOVA.master.cs" Inherits="APIClient.masterNOVA" %>
+
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head runat="server">
+    <title>API Clients</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/book.svg" type="svg" />
+    <link rel="icon" href="assets/img/book.svg" type="svg" />
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/materialadmin.css" />
+    <link rel="stylesheet" href="assets/kendo/kendo.common.min.css" />
+    <link rel="stylesheet" href="/assets/css/kendo.custom.css" />
+    <link rel="stylesheet" href="/assets/css/kendo-tripper.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/estilos.css" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,600,700,800" rel="stylesheet" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="assets/fontawesome-free-5.15.1-web/css/all.min.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/material-design-iconic-font.min.css" />
+
+
+    <asp:ContentPlaceHolder ID="cphEstilosCabecalho" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script src="assets/kanban/js/jquery-2.1.1.js"></script>
+    <script src="assets/kanban/js/angular.js"></script>
+    <script src="assets/js/Library.js"></script>
+
+    <asp:ContentPlaceHolder ID="cphScriptsCabecalho" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body class="menubar-hoverable header-fixed">
+    <header id="header" runat="server">
+        <div class="headerbar">
+            <div class="headerbar-left">
+                <ul class="header-nav header-nav-options">
+                    <li class="header-nav-brand">
+                        <div class="brand-holder">
+                            <a href="#">
+                                <span class="text-lg text-bold text-primary">CLIENT API</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="headerbar-right">
+                <ul class="header-nav ">
+                    <li style="color: #969696; margin-right: 1rem;">
+                        <div class="brand-holder">
+                            <a href="#">
+                                <span class="text-lg text-bold">ROGER SANTOS BARRETO</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="base">
+        <div id="content">
+            <asp:ContentPlaceHolder ID="cphConteudo" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+
+    <script src="assets/js/libs/jquery-ui/jquery-ui.min.js"></script>
+    <script src="assets/js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/libs/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
+    <script src="assets/js/libs/spin.js/spin.min.js"></script>
+    <script src="assets/js/libs/autosize/jquery.autosize.min.js"></script>
+    <script src="assets/js/kendo.all.min.js"></script>
+
+
+    <script src="assets/js/kendo.culture.pt-BR.min.js"></script>
+    <script src="assets/js/comuns.js"></script>
+
+    <asp:ContentPlaceHolder ID="cphChamadasScripts" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script src="assets/js/App.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="cphScripts" runat="server">
+    </asp:ContentPlaceHolder>
+
+</body>
+<script id="successTemplate" type="text/x-kendo-template">
+    <div class="notificacao-sucesso">            
+        <p><i class="fa fa-check"></i>&nbsp; #= message #</p>
+    </div>
+</script>
+
+<script id="errorTemplate" type="text/x-kendo-template">
+    <div class="notificacao-erro">
+        <p><i class="fa fa-close"></i>&nbsp; #= message #</p>
+    </div>
+</script>
+
+<script id="confirmBoxTemplate" type="text/x-kendo-template">
+    <table>
+        <tr>
+            <td>
+                <i class="fa fa-question-circle" style="padding: 10px; font-size: 32px;"></i>
+            </td>
+            <td>
+                <div id="confirmBoxMessage"></div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <button id="confirmBoxYesButton" type="button" class="k-button k-primary">
+                    <i class="fa fa-check"></i>
+                    SIM
+                </button>
+                &nbsp;
+                <button id="confirmBoxNoButton" type="button" class="k-button k-button-cancel">
+                    <i class="fa fa-close"></i>
+                    NÃO
+                </button>
+            </td>
+        </tr>
+    </table>
+</script>
+</html>

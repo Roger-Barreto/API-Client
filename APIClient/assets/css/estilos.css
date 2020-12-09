@@ -1,0 +1,840 @@
+﻿/* possibilitar cards com grids ajustados à altura e largura disponíveis na tela */
+html, body {
+    height: 100vh; /* vh: altura total da viewport */
+    max-width: 100vw; /*vw: largura total da viewport */
+    margin: 0 auto;
+    padding-top: 00px;
+    border: 0px solid red;
+}
+
+.customer-photo-geral {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-size: 32px 35px;
+    background-position: center center;
+    vertical-align: middle;
+    line-height: 32px;
+    margin-left: 5px;
+}
+
+.customer-photo-geral2 {
+    display: inline-block;
+    width: 64px;
+    height: 32px;
+    background-size: 64px 32px;
+    background-position: center center;
+    vertical-align: middle;
+    line-height: 32px;
+    margin-left: 0px;
+}
+
+/* fazer o card de conteúdo ocupar toda largura */
+.contain-lg {
+    max-width: none;
+}
+
+.k-tooltip {
+    background: #0aa89e;
+    border-color: green;
+}
+/* Tooltips de formulário */
+.fieldlist .k-tooltip {
+    background-color: #faebd4;
+    border-color: #f7d7be;
+    color: #ff785a;
+        height: 22px;
+    line-height: 20px;
+}
+.lista-campos-form .k-tooltip {
+    background-color: #faebd4;
+    border-color: #f7d7be;
+    color: #333;
+        height: 22px;
+    line-height: 20px;
+    margin-left:5px;
+}
+section {
+    padding: 15px;
+}
+
+.section-header {
+    height: 44px;
+}
+/* estilo do Bipper para ser utilizado em telas que terão apenas um grid que se ajusta à largura e altura da tela */
+.bip-conteudo-elastico .col-xs-12 .bip-grid-elastico .k-grid-header {
+    font-size: 9pt;
+}
+
+.bip-conteudo-elastico .col-xs-12 .bip-grid-elastico .k-grid-content-locked {
+    font-size: 9pt;
+}
+
+.bip-conteudo-elastico .col-xs-12 .bip-grid-elastico .k-grid-content {
+    overflow-x: auto;
+    overflow-y: auto;
+    font-size: 9pt;
+}
+/* Necessário para não ocultar o ícone de coluna com filtro ao passar o mouse sobre o cabeçalho da coluna */
+.bip-grid-elastico a.k-link {
+            background-color: transparent;
+            border-color: #cccccc;
+            color: #333333;
+        }
+/* ajuste visual de elementos do menu */
+.gui-icon {
+    text-align: center;
+}
+
+.gui-folder > a:after {
+    top: 9px;
+}
+
+@-moz-document url-prefix() {
+    .gui-folder > a:after {
+        top: 8px;
+    }
+}
+/* Mensagens de alerta, erro e sucesso para formulários */
+.alerta-geral-centro, .erro-geral-centro, .sucesso-geral-centro {
+    display: none;
+    position: relative;
+    padding: 10px;
+    line-height: 14pt;
+}
+
+.alerta-geral, .erro-geral, .sucesso-geral {
+    display: none;
+    position: relative;
+    padding: 10px;
+    line-height: 14pt;
+}
+
+#divMsgAlertas {
+    margin-top: 15px;
+    margin-left: 127px;
+    margin-bottom: 15px;
+    min-height: 20px;
+}
+
+#divMsgAlertasCentro {
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Botão secundário - ações auxiliares que não afetam dados (cancelar, voltar) */
+.btn-secundario {
+    color: white;
+    background-color: #a4a3a3;
+    border-color: #a4a3a3;
+}
+    .btn-secundario:hover {
+        color: white;
+        background-color: #808080;
+        border-color: #808080;
+    }
+    .btn-secundario:active, .btn-secundario.active {
+        color: white;
+        background-color: #808080;
+        border-color: #808080;
+    }
+    
+    .btn-secundario:focus {
+        color: white;
+        background-color: #808080;
+        border-color: #808080;
+    }
+
+/* Botão destaque - destacar a ação mais importante ou inicial de uma tela que já possui outros botões de ação (btn-primary) */
+.btn-destaque {
+    color: white;
+    background-color: rgba(213, 95, 22, 1);
+    border-color: rgba(213, 95, 22, 1);
+}
+    .btn-destaque:hover {
+        color: white;
+        background-color: rgba(171, 77, 18, 1);
+        border-color: rgba(171, 77, 18, 1);
+    }
+    .btn-destaque:active, .btn-destaque.active {
+        color: white;
+        background-color: rgba(171, 77, 18, 1);
+        border-color: rgba(171, 77, 18, 1);
+    }
+    
+    .btn-destaque:focus {
+        color: white;
+        background-color: rgba(171, 77, 18, 1);
+        border-color: rgba(171, 77, 18, 1);
+    }
+    
+/* Botões secundários antigos */
+.btn-second {
+    color: white;
+    background-color: #a4a3a3;
+    border-color: #a4a3a3;
+}
+    .btn-second:hover {
+        color: white;
+        background-color: #808080;
+        border-color: #808080;
+    }
+    .btn-second:active, .btn-second.active {
+        color: white;
+        background-color: #808080;
+        border-color: #808080;
+    }
+    
+    .btn-second:focus {
+        color: white;
+        background-color: #808080;
+        border-color: #808080;
+    }
+
+/* Antigo botão destaque */
+.btn-third {
+    color: white;
+    background-color: rgba(213, 95, 22, 1);
+    border-color: rgba(213, 95, 22, 1);
+}
+    .btn-third:hover {
+        color: white;
+        background-color: rgba(171, 77, 18, 1);
+        border-color: rgba(171, 77, 18, 1);
+    }
+    .btn-third:active, .btn-second.active {
+        color: white;
+        background-color: rgba(171, 77, 18, 1);
+        border-color: rgba(171, 77, 18, 1);
+    }
+    
+    .btn-third:focus {
+        color: white;
+        background-color: rgba(171, 77, 18, 1);
+        border-color: rgba(171, 77, 18, 1);
+    }
+    
+
+/* Elementos de formulários */
+.form-control {
+    padding: 3px;
+    border: 1px solid silver;
+    font-size: 14px;
+    height: 30px;
+    color: #20252b;
+}
+
+/* Rotação de ícones */
+.icon-rotate-45 {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.form-group .campoObrigatorio {
+    opacity: 0.8;
+}
+
+.form-group .form-control ~ label:after,
+.form-group .form-control ~ .form-control-line:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    /*left: 45%;*/
+    left: 0;
+    height: 2px;
+    /*width: 10px;*/
+    width: 100%;
+    opacity: 0;
+    /*background-color: #0aa89e;*/
+    -webkit-transition: 0.5s ease all;
+    -o-transition: 0.5s ease all;
+    transition: 0.5s ease all;
+}
+
+.form-group .form-control:focus ~ label:after,
+.form-group .form-control:focus ~ .form-control-line:after {
+    opacity: 1;
+    width: 100%;
+    left: 0;
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+    cursor: not-allowed;
+    background-color: #e5e6e6;
+    opacity: 1;
+}
+
+.k-textbox {
+    width: 100%;
+}
+
+.k-window-title {
+    font-size: 10pt;
+}
+
+.CarregandoOcultar {
+    display: none;
+}
+
+.carregamentoParar {
+    display: inline;
+}
+
+.CarregandoExibir {
+    display: inherit;
+    -moz-animation: spin-moz .7s infinite linear;
+    -webkit-animation: spin-webkit .7s infinite linear;
+    animation: spin .7s infinite linear;
+}
+
+    .CarregandoExibir:hover, .CarregandoExibir:active {
+        text-decoration: none; line-height: 28px;
+            
+    }
+
+@-moz-keyframes spin-moz {
+    0% {
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@-webkit-keyframes spin-webkit {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+/* Template Days */
+.exhibition, .party, .cocktail {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 50%;
+    line-height: 20px;
+}
+
+.exhibition {
+    background-color: #000;
+    color: #000;
+}
+
+.party {
+    background-color: #70c114;
+}
+
+.cocktail {
+    background-color: #0fbeb3;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+
+/* css para formularios */
+.fieldlist {
+    list-style-type: none;
+}
+
+    .fieldlist > li {
+        margin-bottom: 7px;
+        list-style-type: none;
+    }
+        /* css das labels */
+        .fieldlist > li label {
+            font-size: 12px;
+            width: 120px;
+            text-align: right;
+            vertical-align: middle;
+            margin-bottom: 0px;
+            margin-right: 3px;
+            line-height: 100%;
+        }
+
+.label_informacoes {
+    color: blue;
+    text-align: left;
+    font-size: 9pt;
+    line-height: 20pt;
+}
+
+.fieldlist > li label.campoOpcional {
+    color: #808080;
+    font-style: italic;
+}
+
+    .fieldlist > li label.campoOpcional::after {
+        content: " (opcional)";
+    }
+
+.fieldlist > li.ultima-modificacao {
+    color: #808080;
+    text-align: left;
+    font-size: 9pt;
+    line-height: 30pt;
+}
+
+.fieldlist > li a.ultima-modificacao-usuario:link {
+    color: #0aa89e;
+    text-decoration: underline;
+}
+
+.fieldlist > li a.ultima-modificacao-usuario:visited {
+    color: #0aa89e;
+    text-decoration: underline;
+}
+
+.fieldlist > li a.ultima-modificacao-usuario:hover {
+    color: #0aa89e;
+    text-decoration: underline;
+}
+
+.fieldlist > li a.ultima-modificacao-usuario:active {
+    color: #0aa89e;
+    text-decoration: underline;
+}
+
+.fieldlist > li.ultima-modificacao i {
+    vertical-align: middle;
+    margin-bottom: 1px;
+}
+
+/* lista de campos */
+.lista-campos-form {
+    list-style-type: none;
+}
+
+    .lista-campos-form > li {
+        margin-bottom: 7px;
+        list-style-type: none;
+    }
+        /* css das labels */
+        .lista-campos-form > li label {
+            font-size: 12px;
+            width: 120px;
+            text-align: right;
+            vertical-align: middle;
+            margin-bottom: 0px;
+            margin-right: 3px;
+            line-height: 100%;
+        }
+
+        /* Label com ícone de ajuda presente em alguns campos dos formulários */
+        .lista-campos-form label.ajuda-form-label { width: auto;color: #666; cursor: pointer}
+
+        .lista-campos-form label.ajuda-form-label:hover { width: auto;color: #333; cursor: pointer}
+
+.label_informacoes {
+    color: blue;
+    text-align: left;
+    font-size: 9pt;
+    line-height: 20pt;
+}
+
+.lista-campos-form > li label.campoOpcional {
+    color: #808080;
+    font-style: italic;
+}
+
+    .lista-campos-form > li label.campoOpcional::after {
+        content: " (opcional)";
+    }
+
+.lista-campos-form > li.ultima-modificacao {
+    color: #808080;
+    text-align: left;
+    font-size: 9pt;
+    line-height: 30pt;
+}
+
+.lista-campos-form > li a.ultima-modificacao-usuario:link {
+    color: #0aa89e;
+    text-decoration: underline;
+}
+
+.lista-campos-form > li a.ultima-modificacao-usuario:visited {
+    color: #0aa89e;
+    text-decoration: underline;
+}
+
+.lista-campos-form > li a.ultima-modificacao-usuario:hover {
+    color: #0aa89e;
+    text-decoration: underline;
+}
+
+.lista-campos-form > li a.ultima-modificacao-usuario:active {
+    color: #0aa89e;
+    text-decoration: underline;
+}
+
+.lista-campos-form > li.ultima-modificacao i {
+    vertical-align: middle;
+    margin-bottom: 1px;
+}
+
+/* Remove alguns estilos padrão do Firefox (por exemplo: borda vermelha nos inputs com atributos "required" dos formulários) */
+:invalid {
+    box-shadow: none;
+}
+
+:-moz-submit-invalid {
+    box-shadow: none;
+}
+
+:-moz-ui-invalid {
+    box-shadow: none;
+}
+/* -- */
+
+/**************************************************************************************/
+
+input[type='radio'] {
+    vertical-align: text-bottom;
+}
+
+/*.breadcrumb > li { text-transform: uppercase; }*/
+
+/* ícone do módulo */
+.breadcrumb > li:first-child i, .breadcrumb > li:first-child span {
+    font-size: 11pt;
+    vertical-align: text-bottom;
+}
+/* ícone do último item */
+.breadcrumb .brc-icone-link {
+    /*font-size:12px; color:#888E8C;*/
+    vertical-align: sub; display:none
+}
+
+.breadcrumb a:link {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.breadcrumb a:visited {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+/* Error template 
+.k-notification-error.k-group {
+    background: rgba(100%,0%,0%,.7);
+    color: #ffffff;
+}
+.wrong-pass {
+    width: 550px;
+    height: 100px;
+}
+.wrong-pass h3 {
+    color: red;
+    font-size: 1.6em;
+    font-weight: normal;
+    display: inline-block;
+    vertical-align: middle;
+}
+.wrong-pass p {
+    color: #ff0000;
+    color: rgba(100%,0%,0%,.7);
+    font-size: 1.2em;
+    font-weight: normal;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.wrong-pass img {
+    float: left;
+    margin: 30px 15px 30px 30px;
+}*/
+
+
+/* Botão de Filtro Cadastros */
+.btnFiltroCadastros {
+    padding: 3px 7px !important;
+}
+    
+
+/* Ajuste imagem login */
+@media (min-height: 500px) and (max-height: 700px) {
+    section.section-account .img-backdrop {
+        height: 300px;
+    }
+
+    section.section-account .spacer {
+        height: 200px;
+    }
+}
+
+.txtFilter {
+    width: 200px;
+    height: 25px;
+    vertical-align: middle;
+    box-shadow: none;
+    padding: .177em 0;
+    text-indent: .33em;
+    font-size: 100%;
+    border-radius: 4px;
+    border-width: 1px;
+    line-height: normal;
+}
+
+
+.DivPreloader {
+    color: white;
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 47%;
+    left: 47%;
+}
+
+#fundoGeral {
+    visibility: hidden;
+    padding: 0px;
+    position: absolute;
+    padding: 0px;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(051, 051, 051, 0.4);
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+}
+
+#fundoGeralDownload {
+    visibility: hidden;
+    padding: 0px;
+    position: absolute;
+    padding: 0px;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(051, 051, 051, 0.4);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+#txtFindGrid::-webkit-input-placeholder {
+    color: gainsboro;
+}
+
+#txtFindGrid:-moz-placeholder {
+    color: gainsboro;
+}
+
+#txtFindGrid::-moz-placeholder {
+    color: gainsboro;
+}
+
+#txtFindGrid:-ms-input-placeholder {
+    color: gainsboro;
+}
+
+/* campo de pesquisa acima dos grids (input + botão) */
+.pesquisa-cadastros {
+    margin-right: 20px;
+}
+
+    .pesquisa-cadastros button {
+        position: absolute;
+        right: 0;
+        top: 13px;
+        border-radius: 0px 3px 3px 0px;
+        z-index: 1;       
+        height:28px; 
+    }
+    .pesquisa-cadastros button i {        
+        top: 0px;        
+    }
+    .pesquisa-cadastros input {
+        margin-right:20px;
+        height:28px;   
+    }
+
+.customer-name-geral {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 32px;
+    padding-left: 3px;
+}
+.selected-value-geral {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    background-size: 100%;
+    margin-right: 5px;
+    margin-top: -2px;
+    border-radius: 50%;
+    border: 1px solid #0aa89e;
+}
+
+.vertical-line {
+    border-left: 1px solid #BFBFBF;
+    float: left;
+    position: absolute;
+    height:100%;
+}
+
+/* Treeview de indicação de registros pai (form cliente, estrutura, produto, etc) */
+#trvNivelHierarquia .k-treeview .k-item {           
+            padding: 0 0 0 16px;
+        }
+
+        #trvNivelHierarquia {
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            color: black;
+            margin-left: 7px;
+            width: 360px;
+            font-size: 12px;
+            padding: 7px;   
+            padding-bottom: 1px;          
+            border: 1px solid silver;
+            display: -moz-box;
+        }
+
+        #trvNivelHierarquia .k-state-selected { box-shadow:none; color:#333; background-color:transparent }
+        #trvNivelHierarquia .k-in:hover { box-shadow:none; color:#333; background-color:transparent }
+        #trvNivelHierarquia .k-state-focused { box-shadow:none; color:#333; background-color:none }
+        #trvNivelHierarquia .k-top.k-bot  { font-weight:bold; color:#333; margin-top: -2px; }
+        #trvNivelHierarquia .k-treeview-lines { margin-left: -20px }
+            #trvNivelHierarquia .vazio {
+                color: #666;               
+            }
+
+
+.card-head header {
+  padding: 11px 15px;
+}
+
+.card-body {
+  padding: 11px 15px;
+}
+
+/* Animação bounce do glyphicon-download */
+.bounce {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    -moz-animation: bounce 2s infinite;
+    -o-animation: bounce 2s infinite;
+}
+
+.hide{
+  display:none;  
+}
+
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-30px);
+    }
+
+    60% {
+        -webkit-transform: translateY(-15px);
+    }
+}
+
+@-moz-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateY(0);
+    }
+
+    40% {
+        -moz-transform: translateY(-30px);
+    }
+
+    60% {
+        -moz-transform: translateY(-15px);
+    }
+}
+
+@-o-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -o-transform: translateY(0);
+    }
+
+    40% {
+        -o-transform: translateY(-30px);
+    }
+
+    60% {
+        -o-transform: translateY(-15px);
+    }
+}
+
+@-ms-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        -ms-transform: translateY(0);
+    }
+
+    40% {
+        -ms-transform: translateY(-30px);
+    }
+
+    60% {
+        -ms-transform: translateY(-15px);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}

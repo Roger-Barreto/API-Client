@@ -1,0 +1,498 @@
+﻿.k-widget.k-calendar,
+.k-widget.k-calendar .k-content,
+.k-widget.k-calendar .k-header,
+.k-widget.k-calendar th,
+.k-widget.k-calendar .k-link,
+.k-widget.k-calendar .k-state-hover,
+.k-widget.k-calendar .k-state-selected,
+.k-widget.k-calendar .k-state-focused {
+    background: #FFFFFF;
+    border-color: #000000;
+    color: #000;
+    box-shadow: none;
+}
+
+    .k-widget.k-calendar .k-content .k-state-hover,
+    .k-widget.k-calendar .k-state-focused {
+        font-size: 15px;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+
+    .k-widget.k-calendar .k-state-selected, .k-widget.k-calendar .k-state-selected.k-state-focused {
+        font-size: 15px;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+
+    .k-widget.k-calendar .k-content .k-link {
+        padding: 0;
+        min-height: 15px;
+        line-height: 15px;
+    }
+
+    .k-widget.k-calendar th {
+        padding-top: 2px;
+        color: #ff0000;
+    }
+
+    .k-widget.k-calendar td.k-other-month .k-link {
+        color: #bebabd;
+    }
+
+    .k-widget.k-calendar th,
+    .k-widget.k-calendar td {
+        text-align: center;
+    }
+
+    .k-widget.k-calendar .k-nav-prev {
+        visibility: hidden;
+    }
+
+    .k-widget.k-calendar .k-nav-next {
+        visibility: hidden;
+    }
+
+    .k-widget.k-calendar .k-nav-fast {
+        cursor: default;
+    }
+
+/* Deixa iguais estilos de campos desabilitados (textbox, textbox kendo e combo kendo) */
+.k-state-disabled {
+    border-color: #ccc;
+}
+
+.k-input[disabled], .k-textbox[disabled], .k-textbox[disabled]:hover {
+    background-color: #eaeaea;
+    border-color: #ccc;
+    color: #333;
+}
+
+    .k-textbox[disabled], .k-textbox[disabled]:hover {
+        opacity: .7;
+    }
+
+.k-button, .k-button-cancel {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 0px;
+    padding: 5px 10px;
+}
+
+.k-button-cancel {
+    background-color: #a4a3a3;
+    border: 0px solid #808080;
+    color: white;
+}
+
+    .k-button-cancel:hover {
+        background-color: #9b9b9b;
+        border: 0px solid #808080;
+        color: white;
+    }
+
+.k-textbox,
+.k-numeric-wrap,
+.k-dropdown-wrap {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+
+/*.k-textbox:hover,
+.k-autocomplete.k-state-hover,
+.k-picker-wrap.k-state-hover,
+.k-numeric-wrap.k-state-hover,
+.k-dropdown-wrap.k-state-hover {
+  background-color: #ebebeb;
+  background-image: none;
+  background-position: 50% 50%;
+  border-color: #aeaeae;
+}
+.k-textbox:focus,
+.k-autocomplete.k-state-focused,
+.k-picker-wrap.k-state-focused,
+.k-numeric-wrap.k-state-focused,
+.k-dropdown-wrap.k-state-focused,
+.k-multiselect.k-header.k-state-focused {
+  background-color: #EDFBFA !important;
+  background-image: none;
+  background-position: 50% 50%;
+  border-color: #0AA89E;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-width: 1px;
+}
+}*/
+.k-state-focused > .k-input {
+    background-color: #EDFBFA !important;
+}
+/* Botão secundário - laranja */
+.k-secondary {
+    color: #ffffff;
+    border-color: #099087;
+    background-image: none;
+    background-position: 50% 50%;
+    background-color: rgba(213, 95, 22, 1) !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+
+    .k-secondary:focus,
+    .k-secondary .k-state-focused {
+        color: #ffffff !important;
+        border-color: red !important;
+        background-image: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    .k-secondary:hover {
+        color: #ffffff;
+        border-color: red;
+        background-image: none;
+        background-color: rgba(171, 77, 18, 1) !important;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .k-secondary:focus:active:not(.k-state-disabled):not([disabled]),
+    .k-secondary:focus:not(.k-state-disabled):not([disabled]) {
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        color: #fff !important;
+        background-color: rgba(213, 95, 22, 1) !important;
+    }
+
+    .k-secondary:focus {
+        color: #fff !important;
+        background-color: rgba(213, 95, 22, 1) !important;
+        border-color: #055651 !important;
+        background-image: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    .k-secondary:active {
+        color: #ffffff !important;
+        border-color: #055651 !important;
+        background-image: none !important;
+        background-color: rgba(213, 95, 22, 1) !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+:not(.k-state-disabled):not([disabled]).k-button:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+/* botão primário desabilitado */
+.k-button[disabled], .k-button.k-state-disabled, .k-state-disabled .k-button, .k-state-disabled .k-button:hover, .k-button.k-state-disabled:hover, .k-state-disabled .k-button:active, .k-button.k-state-disabled:active {
+    color: #a1a1a1;
+    border-color: #cccccc;
+    background-color: #ebebeb;
+    background-image: none;
+}
+
+    .k-button[disabled], .k-button.k-state-disabled, .k-state-disabled .k-button, .k-state-disabled .k-button:hover, .k-button.k-state-disabled:hover, .k-state-disabled .k-button:active, .k-button.k-state-disabled:active {
+        color: #a1a1a1;
+        border-color: #cccccc;
+        background-color: #ebebeb;
+        background-image: none;
+    }
+
+
+/* GRID */
+.K-grid, .k-grid-content {
+    font-size: 9pt;
+}
+
+.k-grid-header th.k-header, .k-filter-row th {
+    font-weight: bold;
+}
+
+.k-grid tr:hover {
+    background-color: #E6E6E6;
+}
+
+.k-grid td {
+    padding: .3em .4em;
+}
+
+.k-grid-header th.k-header, .k-filter-row th {
+    padding: .3em .5em .3em .4em;
+}
+
+.k-i-expand {
+    margin-left: -4px
+}
+
+/* botões de comando */
+.k-grid-Insert {
+    cursor: pointer;
+    color: #0aa89e;
+    font-size: 12pt;
+    text-decoration: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+
+    .k-grid-Insert[disabled] {
+        cursor: default;
+        color: #a1a1a1;
+        font-size: 12pt;
+        text-decoration: none;
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
+        transition: all 0.30s ease-in-out;
+    }
+
+.k-grid-Update {
+    cursor: pointer;
+    color: #D65F16;
+    font-size: 12pt;
+    text-decoration: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+
+    .k-grid-Update[disabled] {
+        cursor: default;
+        color: #a1a1a1;
+        font-size: 12pt;
+        text-decoration: none;
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
+        transition: all 0.30s ease-in-out;
+    }
+
+.k-grid-Delete {
+    cursor: pointer;
+    color: #0aa89e;
+    font-size: 12pt;
+    text-decoration: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+
+    .k-grid-Delete[disabled] {
+        cursor: default;
+        color: #a1a1a1;
+        font-size: 12pt;
+        text-decoration: none;
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
+        transition: all 0.30s ease-in-out;
+    }
+
+.k-grid-Detalhes {
+    color: #0aa89e;
+    font-size: 12pt;
+    text-decoration: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+
+.k-grid-Update:hover {
+    color: #B95314;
+    text-decoration: none;
+}
+
+.k-grid-Update[disabled]:hover {
+    color: #a1a1a1;
+    text-decoration: none;
+}
+
+.k-grid-Insert:hover {
+    color: #08817a;
+    text-decoration: none;
+}
+
+.k-grid-Insert[disabled]:hover {
+    color: #a1a1a1;
+    text-decoration: none;
+}
+
+.k-grid-Delete:hover {
+    color: #08817a;
+    text-decoration: none;
+}
+
+.k-grid-Delete[disabled]:hover {
+    color: #a1a1a1;
+    text-decoration: none;
+}
+
+.k-grid-Detalhes:hover {
+    color: #08817a;
+    text-decoration: none;
+}
+
+/* botões de salvar e cancelar de grids editáveis */
+.k-grid-save-changes, .k-grid-cancel-changes {
+    color: #000;
+    border: 1px solid #E2E0E0;
+    background-image: none;
+    background-position: 50% 50%;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+
+    .k-grid-save-changes:hover {
+        background-color: #edfbfa
+    }
+
+
+/* Notificação de sucesso */
+.k-popup.k-notification {
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.33);
+    -ms-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.33);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.33);
+}
+
+.k-popup.k-notification {
+    border: none;
+    position: absolute;
+    margin: 0px auto;
+}
+
+.notificacao-sucesso {
+    height: 25px;
+    /*width: 300px;*/
+    border: 1px solid #94af7d;
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-radius: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+    .notificacao-sucesso p {
+        line-height: 15px;
+        margin: 5px 0px 5px 0px;
+    }
+
+.notificacao-erro {
+    min-height: 25px;
+    /*width: 400px;*/
+    border: 1px solid #CC9C9B;
+    color: #a94442;
+    background-color: #f2dede;
+    border-radius: 3px;
+    /*padding-left: 5px;
+    padding-right: 5px;*/
+    text-align: center;
+}
+
+    .notificacao-erro p {
+        line-height: 15px;
+        margin: 5px 0px 5px 0px;
+    }
+
+.confirm-success {
+    height: 25px;
+    border: 1px solid #94af7d;
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-radius: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.wrong-pass {
+    height: 25px;
+    width: 400px;
+    border: 1px solid #a94442;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    border-radius: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+
+/* TABS */
+.k-tabstrip {
+    border: 0px;
+    background: none;
+    margin: 0px;
+}
+
+    .k-tabstrip .k-tabstrip-items {
+        padding: 0px
+    }
+
+    .k-tabstrip > .k-content, .k-panelbar .k-tabstrip > .k-content {
+        margin: 0px;
+        padding: .92em .92em;
+    }
+
+    .k-tabstrip:focus {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+/* Estilos para corrigir o design do componente NumericTextBox do kendo */
+.k-numeric-wrap.k-state-default input {
+    height: 28px
+}
+
+.k-numeric-wrap.k-state-disabled {
+    border: 1px solid #cccccc !important;
+}
+
+    .k-numeric-wrap.k-state-disabled input {
+        height: 28px
+    }
+
+span.k-numerictextbox {
+    border: 0px
+}
+
+.k-checkbox-label::before {
+    border-color: #cccccc !important;
+    margin-top: 0px !important;
+    background: #ffffff !important;
+    border-radius: 3px !important;
+    position: relative !important;
+    display: inline-block !important;
+    line-height: 16px !important;
+    cursor: pointer !important;
+    border-style: solid !important;
+    margin-left: -15px !important;
+    left: -5px !important;
+}
